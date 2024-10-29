@@ -1,0 +1,15 @@
+{
+  // Code Runner 확장에서 사용하는 언어별 실행 명령어를 설정하는 맵
+  "code-runner.executorMap": {
+    // C 언어를 실행할 때 사용할 명령어 설정
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt -lws2_32"
+    // "cd $dir": 현재 파일이 위치한 디렉터리로 이동
+    // "$dir"은 현재 파일의 디렉터리 경로를 나타내는 Code Runner 변수
+    // "&& gcc $fileName -o $fileNameWithoutExt -lws2_32": 
+    // 현재 파일을 컴파일하여 실행 파일을 생성
+    // - "gcc": C 프로그램을 컴파일하는 GCC 컴파일러
+    // - "$fileName": 현재 파일의 이름 (예: hello_server.c)
+    // - "-o $fileNameWithoutExt": 확장자를 제외한 파일명으로 실행 파일 생성 (예: hello_server)
+    // - "-lws2_32": Windows 소켓 라이브러리를 링크하여 소켓 함수 사용 가능하게 설정
+  }
+}
